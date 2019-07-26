@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/style/main.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+<title>DevNullSMTP Demo - Compose</title>
+</head>
+<body>
+    <form th:action="@{/send}" method="post" th:object="${email}">
+        <h3>Compose an Email</h3>
+        <div>
+           <label for="fromAddress">From </label>
+           <input type="text" name="fromAddress"/>
+        </div>
+        <div>
+           <label for="toAddress">To </label>
+           <input type="text" name="toAddress"/>
+        </div>
+        <div>
+           <label for="subject">Subject </label>
+           <input type="text" name="subject"/>
+        </div>
+        <div>
+           <label for="message">Message </label>
+           <textarea cols="100" rows="6" name="message"></textarea>
+        </div>
+        <div>
+           <input type="submit" value="Send" />
+        </div>
+    </form>
+</body>
+</html>

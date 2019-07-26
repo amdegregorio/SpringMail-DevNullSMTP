@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>DevNullSMTP Demo - Sent</title>
+<link th:href="@{/style/main.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <h3>Email Sent</h3>
+    <div>
+        <label>From </label>
+        <span th:text="${email.fromAddress}"></span>
+    </div>
+    <div>
+        <label>To </label>
+        <span th:text="${email.toAddress}"></span>
+    </div>
+    <div>
+        <label>Subject </label>
+        <span th:text="${email.subject}"></span>
+    </div>
+    <div>
+        <label>Message </label>
+        <span th:text="${email.message}"></span>
+    </div>
+</body>
+</html>
